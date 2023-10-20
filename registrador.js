@@ -5,19 +5,22 @@ class ProductManager {
   }
 
   addProduct(title, description, price, thumbnail, code, stock) {
-    //validar que todos los campos sean obligatorios
-    if (title || description || price || thumbnail || code || stock) {
-      console.error("Todos los campos son obligatorios");
+    
+    // Validar que todos los campos fueron ingresados
+    if (title && description && price && thumbnail && code && stock) {
+      console.log("Campos ingresados correctamente");
+    } else {
+       console.log("Todos los campos son obligatorios");
     }
 
-    //validar que code no se repite
+    // Validar que el codigo de producto es unico
     if (this.products.some((product) => product.code === code)) {
-      console.error("El código del producto ya existe");
+      console.log("El código del producto ya existe");
       return;
     }
 
     const newProduct = {
-      id: this.nextId, //asignar un ID
+      id: this.nextId,
       title: title,
       description: description,
       price: price,
@@ -27,25 +30,23 @@ class ProductManager {
     };
     this.products.push(newProduct);
     console.log("Producto agregado: ", newProduct);
-
-    //incrementar el contador de ID
     this.nextId++;
   }
 
-  // mostrar el arreglo con los produtos creados
+  // Mostrar la lista de productos
   getProducts() {
     return this.products;
   }
 
-  //buscar un producto que coincida con el id
-  getProductById() {
-    const product = this.products.find((product) => product.id === this.nextId);
+  // Buscar producto por ID
+  getProductById(id) {
+    const product = this.products.find((product) => product.id === id);
     return product;
   }
 }
 
 const manager = new ProductManager();
-manager.addProduct(
+ manager.addProduct(
   "producto1",
   "Fideos semolados",
   5.3,
@@ -60,14 +61,14 @@ manager.addProduct(
   "imagen2.jpg",
   123456,
   15
-);
+); 
 
 const productsList = manager.getProducts();
 console.log(productsList);
 
 const productFind = manager.getProductById(1);
 if (productFind) {
-  console.log("producto encontrado: ", product);
+  console.log("Producto encontrado: ", productFind);
 } else {
-  console.log("producto no encontrado");
+  console.log("Producto no encontrado");
 }

@@ -1,7 +1,10 @@
+const fs = require("fs");
+
 class ProductManager {
-  constructor() {
+  constructor(path) {
     this.products = [];
     this.nextId = 1;
+    this.path = path;
   }
 
   addProduct(title, description, price, thumbnail, code, stock) {
@@ -45,7 +48,7 @@ class ProductManager {
   }
 }
 
-const manager = new ProductManager();
+const manager = new ProductManager('D:\Luis\Documents\GitHub\BACKEND_CODER\Registrador');
  manager.addProduct(
   "producto1",
   "Fideos semolados",

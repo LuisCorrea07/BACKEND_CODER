@@ -1,9 +1,11 @@
-import http from "http"
+import http from "http";
 
-const app = htpp.createServer((req, res)=>{
-    res.end("Mi primer hola mundo desde Backend")
-})
+//Create a server
+const server = http.createServer((req, res) => {
+  res.end("Hello world, this is my first Backend application"); //show a message, in this case hello world
+});
 
-app.listen(8080, ()=>{
-    console.log("Primer backend activo en puerto 8080")
-})
+//listen server
+server.listen(8080, () => {
+  console.log("listen on port 8080"); //show in console that server listening on port
+});

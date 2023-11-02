@@ -4,12 +4,12 @@ const router = Router()
 
 const users = []
 
-
+/* 
 //Router Middleware
 router.use((req,res,next) => {
     console.log(Date.now())
     next()
-})
+}) */
 
 
 

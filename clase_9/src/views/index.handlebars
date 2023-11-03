@@ -1,4 +1,15 @@
 <div>
-    <h1>SISTEMA ACTIVO - usuario {{lastName}}, {{firstName}}</h1>
-    <h2>{{age}}</h2>
+  <h1>SISTEMA ACTIVO - usuario
+    {{user.lastName}},
+    {{user.firstName}}
+    ({{user.age}})</h1>
+
+    
+  {{#if isAdmin}}
+    <ul>
+      {{#each foods}}
+        <li> {{this.name}} ({{this.price}}) </li>
+      {{/each}}
+    </ul>
+  {{/if}}
 </div>

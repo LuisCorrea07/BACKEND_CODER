@@ -65,7 +65,10 @@ router.get('/', (req, res) => {
 })
 
 router.get('/register', (req, res) => {
-  res.render('register', {})
+  res.render('register', {title:'Registro'})
 })
 
+router.get('/chat', (req, res) => {
+  res.render('chat', {title: 'Coder Compras Chat'})
+})
 export default router

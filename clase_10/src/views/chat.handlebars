@@ -1,0 +1,14 @@
+<div>
+    <h1> SISTEMA ACTIVO - CHAT</h1>
+    <button onclick="sendMessage()">Enviar</button>
+</div>
+
+{{!-- cargamos un CLIENTE de socket.IO --}}
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    const socketClient = io()
+
+    cosnt senMessage = () => {
+        socketClient.emit('message', 'Este es un msj desde el cliente')
+    }
+</script>

@@ -21,6 +21,11 @@ socketSerever.on('connection', socket =>{
 
     socket.on('message', data =>{
         console.log(data)
+        //enviando a TODOS MENOS el que envió msj
+        socket.broadcast.emit('confirmation', 'Esta es la confirmacion')
+    
+        //enviando a todos los clientes
+        socketSerever.emit('confirmation', 'Esta es la confirmacion')
     })
 })
 app.use(express.json())

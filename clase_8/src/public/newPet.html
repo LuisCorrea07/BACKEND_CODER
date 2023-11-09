@@ -8,8 +8,13 @@
 <body>
     <h1>Carga de mascotas</h1>
 
-    <form action="http://localhost:8080/api/pets" method="post" enctype="application/x-www-form-urlencoded">
-    <!-- <form action="http://localhost:8080/api/pets" method="post" enctype="multipart/form-data"> -->
+    <!--
+        Este es un ejemplo de formulario para probar el envío de datos a un endpoint tipo POST.
+        Atención!, es muy importante que el atributo enctype del form esté en form-data si se desea
+        enviar archivos junto a los contenidos de texto en el body de la solicitud
+    -->
+    <!-- <form action="http://localhost:8080/api/pets" method="post" enctype="application/x-www-form-urlencoded"> -->
+    <form action="http://localhost:8080/api/pets" method="post" enctype="multipart/form-data">
         <input type="text" name="petName" placeholder="Nombre">
         <br />
         <input type="text" name="petBrand" placeholder="Raza">

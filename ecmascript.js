@@ -1,17 +1,17 @@
-/* const nombres = ["Carlos", "Carolina", "Jorge", "Pepe", "Florencia"]
-const nombreBuscado="Carlos"
+/* const nombres = ['Carlos', 'Carolina', 'Jorge', 'Pepe', 'Florencia']
+const nombreBuscado='Carlos'
 /* for(let i =0; i< nombres.length; i++){
     console.log(nombres[i]);
 }
 if(nombres.includes(nombreBuscado)){
-    console.log("Nombre incluido")
+    console.log('Nombre incluido')
 }else{
-    console.log("Nombre no incluido")
+    console.log('Nombre no incluido')
 } */
 
 /* const datosPersonales = {
-    nombre: "Carlos",
-    apellido: "Perren",
+    nombre: 'Carlos',
+    apellido: 'Perren',
     edad: 48,
     saldo: 1000.54,
     activo:true
@@ -38,12 +38,12 @@ const total = bills.reduce((actual,adder) => {
 console.log(total) */
 
 //operador spread (...)
-/* const datosPersonales = {nombre: "Carlos", apellido: "Perren",edad: 48} */
+/* const datosPersonales = {nombre: 'Carlos', apellido: 'Perren',edad: 48} */
 
 //Desestructuracion de objetos
 /* const datosCompletos = {
     ...datosPersonales,//desestructurando
-    suscripcion: "premium",
+    suscripcion: 'premium',
     saldo: 10250.36
 }
 

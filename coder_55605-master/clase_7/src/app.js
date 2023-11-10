@@ -40,7 +40,7 @@ app.post('/api/words', (req, res) => {
     try {
         // Verificamos que en el body tengamos una key llamada word, y que no esté en blanco
         if (!req.body.hasOwnProperty('word') || req.body.word === '') {
-            res.status(400).send({ err: 'El body debe contener un key con nombre "word", que indique la palabra a agregar' })
+            res.status(400).send({ err: 'El body debe contener un key con nombre 'word', que indique la palabra a agregar' })
         } else {
             // Aprovechamos las template strings para agregar la palabra indicada en el body al final de la frase
             // Luego con split, separamos la frase en un array de palabras.
@@ -65,7 +65,7 @@ app.put('/api/words/:pos', (req, res) => {
 
         // Combinamos los chequeos de los dos endpoints anteriores
         if (isNaN(pos) || pos < 1 || pos > wordsInPhrase.length || !req.body.hasOwnProperty('word') || req.body.word === '') {
-            res.status(400).send({ err: 'El parámetro pos debe ser un entero positivo y el body debe contener un key con nombre "word", que indique la palabra a agregar' })
+            res.status(400).send({ err: 'El parámetro pos debe ser un entero positivo y el body debe contener un key con nombre 'word', que indique la palabra a agregar' })
         } else {
             // Almacenamos la palabra previa, ya que en el ejercicio se solicita devolver esta polabra en la respuesta
             // Actualizamos la posición del array con la nueva palabra, y aprovechamos el método join() para volver

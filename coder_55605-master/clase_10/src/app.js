@@ -18,11 +18,11 @@ const httpServer = app.listen(PORT, () => {
 
 // Creamos un nuevo servidor de Websockets
 const socketServer = new Server(httpServer)
-// Ponemos a "escuchar" el servidor para eventos de conexión
+// Ponemos a 'escuchar' el servidor para eventos de conexión
 socketServer.on('connection', socket => {
     console.log(socket.id)
 
-    // Ahora lo ponemos a "escuchar" por mensajes específicos que vengan bajo el tópico "message"
+    // Ahora lo ponemos a 'escuchar' por mensajes específicos que vengan bajo el tópico 'message'
     socket.on('message', data => {
         console.log(data)
         // Envía SOLO a el cliente específico que emitió el mensaje message
@@ -35,7 +35,7 @@ socketServer.on('connection', socket => {
         socketServer.emit('confirmation', 'Esta es la confirmación')
     })
 
-    // "Escuchamos" por otros mensajes bajo el tópico "new_message", así podemos agregar todos
+    // 'Escuchamos' por otros mensajes bajo el tópico 'new_message', así podemos agregar todos
     // los tópicos que necesitemos para trabajar
     socket.on('new_message', data => {
         socketServer.emit('message_added', data)

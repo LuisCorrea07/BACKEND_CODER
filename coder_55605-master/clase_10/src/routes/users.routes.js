@@ -5,7 +5,7 @@ const router = Router()
 
 const users = []
 
-// Un middleware es esencialmente una función que Express nos permite "inyectar"
+// Un middleware es esencialmente una función que Express nos permite 'inyectar'
 // en la cadeja de ejecución de procesos que realiza.
 // En este caso lo hacemos a nivel de ROUTER, es decir, para cualquier endpoint
 // definido en este archivo de users, se ejecutará previamente este console log
@@ -17,13 +17,13 @@ const users = []
 // Middleware a nivel de endpoint
 // Podemos declarar una función para utilizar como middleware
 // Observar el uso de req, res y next como parámetros, Express se encargará de entregarlos
-// next() es un método que permitirá al middleware seguir la "cadena" en caso que todo esté ok.
+// next() es un método que permitirá al middleware seguir la 'cadena' en caso que todo esté ok.
 const report = (req, res, next) => {
     console.log(`Ahora: ${new Date().toLocaleString()}`)
     next()
 }
 
-// En este endpoint vemos como podemos "inyectar" el eslabón del middleware para que se ejecute
+// En este endpoint vemos como podemos 'inyectar' el eslabón del middleware para que se ejecute
 // antes que se procese el callback del endpoint
 router.get('/', report, (req, res) => {
     res.status(200).send({ data: users })

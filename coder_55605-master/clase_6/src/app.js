@@ -35,7 +35,7 @@ app.get('/hello', (req, res) => {
 // A este segundo endpoint accedemos desde http://localhost:8080/welcome y retorna un mensaje
 // en HTML
 app.get('/welcome', (req, res) => {
-    res.send('<h1 style="color: blue;">Bienvenida en azul!</h1>')
+    res.send('<h1 style='color: blue;'>Bienvenida en azul!</h1>')
 })
 
 // A este tercer endpoint accedemos desde http://localhost:8080/users y retorna un mensaje
@@ -45,7 +45,7 @@ app.get('/users', (req, res) => {
 })
 
 // Este endpoint recibe un PARAMETRO utilizando la opción req.params
-// Express "inyecta" en el objeto req.params la/s variable/s que indiquemos en la ruta,
+// Express 'inyecta' en el objeto req.params la/s variable/s que indiquemos en la ruta,
 // SIEMPRE debemos indicarlas antecediendo dos puntos (:)
 // Accedemos al endpoint desde http://localhost:8080/userparams/2, el parámetro 2
 // estará disponible en el callback como req.params.uid (o el nombre que hayamos elegido)
@@ -54,7 +54,7 @@ app.get('/userparams/:uid', (req, res) => {
 })
 
 // Este endpoint recibe un PARAMETRO utilizando la opción req.query
-// Express "inyecta" en el objeto req.query la/s variable/s que indiquemos en la ruta,
+// Express 'inyecta' en el objeto req.query la/s variable/s que indiquemos en la ruta,
 // SIEMPRE debemos indicarlas utilizando el signo de pregunta (?) para marcar el inicio
 // de variables y la Y comercial (&) para separar una variable de otra.
 // Accedemos al endpoint desde http://localhost:8080/userquery?uid=2, el parámetro 2
@@ -63,7 +63,7 @@ app.get('/userquery', (req, res) => {
     res.send(users[req.query.uid])
 })
 
-// Ponemos a "escuchar" el servidor en el puerto
+// Ponemos a 'escuchar' el servidor en el puerto
 app.listen(PORT, () => {
     console.log(`Servidor express activo en puerto ${PORT}`)
 })

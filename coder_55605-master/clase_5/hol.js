@@ -21,7 +21,7 @@ class UserManager {
     }
 
     async createUser(user) {
-        // Aplicamos un cifrado simple con el módulo crypto a la clave "plana" recibida
+        // Aplicamos un cifrado simple con el módulo crypto a la clave 'plana' recibida
         // y la sobreescribimos (user.pass)
         user.pass = crypto.createHash('sha256').update(user.pass).digest('hex')
         // Una vez cifrada la clave, almacenamos en archivo
@@ -34,8 +34,8 @@ class UserManager {
         const savedUserJson = await JSON.parse(savedUser)
         
         // Como el cifrado que hemos hecho no es reversible, no tenemos opción de
-        // "desencriptar" la clave. Lo que hacemos es aplicar el mismo proceso de
-        // cifrado a la clave "plana" que recibimos ahora, y comparar ese resultado
+        // 'desencriptar' la clave. Lo que hacemos es aplicar el mismo proceso de
+        // cifrado a la clave 'plana' que recibimos ahora, y comparar ese resultado
         // con la clave almacenada en archivo.
         const hashedPass = crypto.createHash('sha256').update(pass).digest('hex')
 

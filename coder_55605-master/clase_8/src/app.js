@@ -11,7 +11,7 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-// Un middleware es esencialmente una función que Express nos permite "inyectar"
+// Un middleware es esencialmente una función que Express nos permite 'inyectar'
 // en la cadeja de ejecución de procesos que realiza.
 // En este caso lo hacemos a nivel de APLICACION, utilizando el método use().
 // Quiere decir que este middleware se ejecutará con cualquier solicitud recibida,

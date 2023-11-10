@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     res.status(200).send({ data: pets })
 })
 
-// Ejemplo de uso de uploader como middleware, lo "inyectamos" en este endpoint,
+// Ejemplo de uso de uploader como middleware, lo 'inyectamos' en este endpoint,
 // con lo cual al recibir una solicitud, se encargará de la parte de archivos,
 // mientras los contenidos de texto serán procesados luego por el callback den endpoint
 router.post('/', uploader.single('avatar'), (req, res) => {

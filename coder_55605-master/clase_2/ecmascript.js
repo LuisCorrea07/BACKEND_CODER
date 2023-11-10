@@ -53,7 +53,7 @@ console.log(total) */
 
 // Operador spread (...)
 
-// const datosPersonales = { apellido: "Perren", nombre: "Carlos", edad: 48 }
+// const datosPersonales = { apellido: 'Perren', nombre: 'Carlos', edad: 48 }
 
 // Desestructuración de objetos
 /* const datosCompletos = {

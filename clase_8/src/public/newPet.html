@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang='es'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Carga de mascotas</title>
 </head>
 <body>
@@ -13,15 +13,15 @@
         Atención!, es muy importante que el atributo enctype del form esté en form-data si se desea
         enviar archivos junto a los contenidos de texto en el body de la solicitud
     -->
-    <!-- <form action="http://localhost:8080/api/pets" method="post" enctype="application/x-www-form-urlencoded"> -->
-    <form action="http://localhost:8080/api/pets" method="post" enctype="multipart/form-data">
-        <input type="text" name="petName" placeholder="Nombre">
+    <!-- <form action='http://localhost:8080/api/pets' method='post' enctype='application/x-www-form-urlencoded'> -->
+    <form action='http://localhost:8080/api/pets' method='post' enctype='multipart/form-data'>
+        <input type='text' name='petName' placeholder='Nombre'>
         <br />
-        <input type="text" name="petBrand" placeholder="Raza">
+        <input type='text' name='petBrand' placeholder='Raza'>
         <br />
-        <input type="file" name="avatar">
+        <input type='file' name='avatar'>
         <br /><br />
-        <button type="submit">Cargar</button>
+        <button type='submit'>Cargar</button>
     </form>
 </body>
 </html>

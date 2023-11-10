@@ -46,7 +46,7 @@ const division = (a, b) => {
 const calculos = async () => {
     try {
         // Como estamos en el ambito de una función asíncrona, podemos utilizar await
-        // para "esperar" el resultado de una promesa, de esta forma no necesitamos el bloque then()
+        // para 'esperar' el resultado de una promesa, de esta forma no necesitamos el bloque then()
         const resultado = await division(10, 0)
         // Este console log no se ejecutará hasta que se resuelva la promesa (resolve)
         console.log(resultado)

@@ -16,7 +16,7 @@ const nuevosValores2 = valores.map((x) => {
 })
 console.log(nuevosValores2)
 
-// Recordemos que en las arrow, la "flecha" separa precisamente los parámetros (izquierda)
+// Recordemos que en las arrow, la 'flecha' separa precisamente los parámetros (izquierda)
 // del bloque a ejecutar (derecha)
 // Cuando la función recibe un único parámetro, podemos prescindir de los paréntesis (izquierda),
 // y si procesa una única instrucción, también podemos prescindir de las llaves (derecha) para enmarcar

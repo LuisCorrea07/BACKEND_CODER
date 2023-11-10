@@ -1,7 +1,7 @@
 /**
  * Este es nuestro primer servidor NodeJS!
  * 
- * Utilizando el módulo nativo http, creamos un servidor que "escucha" en
+ * Utilizando el módulo nativo http, creamos un servidor que 'escucha' en
  * el puerto 8080, y responde con un saludo a cualquier solicitud
  */
 

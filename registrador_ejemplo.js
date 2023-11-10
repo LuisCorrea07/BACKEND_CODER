@@ -12,7 +12,7 @@ class TicketManager {
 
     agregarEvento(nombre, lugar,precio,capacidad,fecha) {
         const eventoNuevo = {
-            id: "autoincrement",
+            id: 'autoincrement',
             nombre: nombre,
             lugar: lugar,
             precio: precio,
@@ -27,4 +27,4 @@ class TicketManager {
 }
 
 const manager = new TicketManager()
-manager.agregarEvento("Evento 1", "Rafaela", 3000, 100)
+manager.agregarEvento('Evento 1', 'Rafaela', 3000, 100)

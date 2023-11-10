@@ -42,7 +42,7 @@ app.get('/products/:pid', async (req, res) => {
     // de productos para encontrar el indicado y retornar solo ese objeto con res.send()
 })
 
-// Ponemos a "escuchar" el servidor en el puerto
+// Ponemos a 'escuchar' el servidor en el puerto
 app.listen(PORT, () => {
     console.log(`Servidor express activo en puerto ${PORT}`)
 })

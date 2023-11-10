@@ -112,7 +112,7 @@ class TicketManager {
     }
 
     /**
-     * "Copia" los datos del evento indicado, aprovechando el operador spread,
+     * 'Copia' los datos del evento indicado, aprovechando el operador spread,
      * agrega nueva localidad y fecha, con un array de participantes vacío, para
      * generar un nuevo evento y agregarlo al array de eventos.
      */

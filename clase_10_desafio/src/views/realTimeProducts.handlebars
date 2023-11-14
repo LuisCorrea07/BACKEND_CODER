@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos en Tiempo Real</title>
+</head>
+<body>
+  <h1>Productos en Tiempo Real</h1>
+  <ul id="productList">
+    {{#each products}}
+      <li>{{this.title}} - {{this.description}}</li>
+    {{/each}}
+  </ul>
+
+  <!-- Formulario para agregar productos -->
+  <form id="productForm">
+    <label for="title">Título:</label>
+    <input type="text" id="title" name="title" required>
+    <label for="description">Descripción:</label>
+    <input type="text" id="description" name="description" required>
+    <!-- Agrega los demás campos del producto según tu modelo -->
+    <button type="submit">Agregar Producto</button>
+  </form>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+
+    socket.on('productsUpdated', (data) => {
+      // Actualizar la lista de productos en tiempo real
+      const productList = document.getElementById('productList');
+      productList.innerHTML = data.products.map(product => `<li>${product.title} - ${product.description}</li>`).join('');
+    });
+
+    // Manejar el envío del formulario a través de WebSocket
+    const productForm = document.getElementById('productForm');
+    productForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const formData = new FormData(productForm);
+      const productData = {};
+      formData.forEach((value, key) => {
+        productData[key] = value;
+      });
+      socket.emit('addProduct', productData);
+      productForm.reset();
+    });
+  </script>
+</body>
+</html>

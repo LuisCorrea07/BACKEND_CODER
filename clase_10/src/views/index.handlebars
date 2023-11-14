@@ -1,11 +1,17 @@
-<div>
-    <h1>SISTEMA ACTIVO - usuario {{user.lastName}}, {{user.firstName}}</h1>
-
-    {{#if isAdmin}}
-        <ul>
-        {{#each food}}
-            <li>{{this.name}} ({{this.price}})</li>
-        {{/each}}
-        </ul>
-    {{/if}}
-</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Productos</title>
+</head>
+<body>
+  <h1>Lista de Productos</h1>
+  <ul>
+    {{#each products}}
+      <li>{{this.title}} - {{this.description}}</li>
+    {{/each}}
+  </ul>
+</body>
+</html>

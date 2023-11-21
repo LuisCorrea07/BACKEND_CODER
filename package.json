@@ -1,0 +1,12 @@
+{
+  "name": "backend_coder",
+  "version": "1.0.0",
+  "description": "![CoderHouse](https://www.coderhouse.com/imgs/ch.svg)\r # [CODERHOUSE](https://www.coderhouse.com/)",
+  "main": "ecmascript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

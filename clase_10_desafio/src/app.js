@@ -4,7 +4,7 @@ import exphbs from "express-handlebars";
 import http from "http";
 import { Server } from "socket.io";
 import path from "path";
-import productsRouter from "./routes/products.routes";
+import productsRouter from "./routes/products.routes.js";
 
 const app = express();
 const server = http.createServer(app);

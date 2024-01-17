@@ -1,5 +1,4 @@
 import { Router } from 'express'
-
 import { uploader } from '../uploader.js'
 import { ProductController } from '../controllers/product.controller.mdb.js'
 
@@ -9,11 +8,6 @@ const controller = new ProductController()
 router.get('/', async (req, res) => {
     const products = await controller.getProducts()
     res.status(200).send({ status: 'OK', data: products })
-})
-
-router.get('/:pid', async (req, res) => {
-    const product = await controller.getProduct(req.params.pid)
-    res.status(200).send({ status: 'OK', data: product })
 })
 
 router.post('/', uploader.single('thumbnail'), async (req, res) => {

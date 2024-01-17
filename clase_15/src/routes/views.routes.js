@@ -1,14 +1,16 @@
-import { Router } from "express";
-import { ProductController } from "../controllers/product.controller.mdb.js";
+import { Router } from 'express'
+import { ProductController } from '../controllers/product.controller.mdb.js'
 
-const router = Router();
+const router = Router()
 const controller = new ProductController()
 
-
-
-router.get("/products", async (req, res) => {
-    const products = await ProductController.getProducts()
+router.get('/products', async (req, res) => {
+    const products = await controller.getProducts()
     
-    res.render("products", {});
-});
-export default router;
+    res.render('products', {
+        title: 'Listado de PRODUCTOS',
+        products: products
+    })
+})
+
+export default router
